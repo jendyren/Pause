@@ -19,86 +19,95 @@
     <!-- Fonts CSS-->
     <link rel="stylesheet" href="css/heading.css" />
     <link rel="stylesheet" href="css/body.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
   </head>
   
   <body id="page-top">
     <header class="masthead bg-primary text-white text-center">
       <div class="container d-flex align-items-center flex-column">
         <!-- Masthead Heading-->
-        <h1 class="masthead-heading mb-0">Pause</h1>
-        <!-- Masthead Avatar Image--><img
-          class="masthead-avatar mb-5"
-          src="assets/img/avataaars.svg"
-          alt=""
-        />
-        
+        <!-- Masthead Avatar Image-->
+        <img class="logo" src="assets/img/logo.png">
+
         <!-- Masthead Subheading-->
-        <p class="pre-wrap masthead-subheading font-weight-light mb-0">
-          Our mission is to help people, especially during the COVID-19
-          pandemic, take regular breaks from their work and schooling. We
+        <div class="intro"> 
+        <img class="reading" src="assets/img/reading.png">
+        <p class="mission">
+          Our <b>mission</b> is to help people, especially during the COVID-19
+          pandemic, take regular breaks from their work and schooling. <br><br>We
           promote mindfulness and a healthy work & life balance.
         </p>
-      
+        </div>
       </div>
       
     </header>
     
+    
     <section class="page-section bg-primary text-white mb-0" id="about">
-      
+      <div class="divider-custom divider-light">
+        <div class="vector-image">
+          <img src = "assets/img/divider.png" class="divider">
+          <div class = "text-image">
+            Start times for pauses!
+          </div>
+        </div>
+      </div>  
+      </div>
       <div class="container">
         <!-- Portfolio Grid Items-->
         <div class="row justify-content-center">
           <!-- Portfolio Items-->
           <div class="col-md-6 col-lg-4 mb-5">
-            <div
-              class="portfolio-item mx-auto"
-              data-toggle="modal"
-              data-target="#portfolioModal0"
-            >
-            
-              <img
-                class="img-fluid"
-                src="assets/img/raindrop.png"
-                alt="raindrop"
-              />
+            <div class="portfolio-item mx-auto">
+              <center>
+                <img
+                  class="pause-imgs"
+                  src="assets/img/raindrop.png"
+                  alt="raindrop"
+                />
+                <p class="pause-text">Water Pause</p>
+              </center>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 mb-5">
-            <div
-              class="portfolio-item mx-auto"
-              data-toggle="modal"
-              data-target="#portfolioModal1"
-            >
-             
-              <img
-                class="img-fluid"
-                src="assets/img/stretch.png"
-                alt="stretch"
-              />
+            <div class="portfolio-item mx-auto">
+              <center>
+                <img
+                  class="pause-imgs"
+                  src="assets/img/stretch.png"
+                  alt="stretch"
+                />
+                <p class="pause-text">Stretch Pause</p>
+              </center>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 mb-5">
-            <div
-              class="portfolio-item mx-auto"
-              data-toggle="modal"
-              data-target="#portfolioModal2"
-            >
-              <img
-                class="img-fluid"
-                src="assets/img/wild.png"
-                alt="Circus Tent"
-              />
+            <div class="portfolio-item mx-auto">
+              <center>
+                <img
+                  class="pause-imgs"
+                  src="assets/img/wild.png"
+                  alt="wild card"
+                />
+                <p class="pause-text">Wild Card Pause</p>
+              </center>
             </div>
           </div>
+        </div>
+        
+      <div class = "wildcard">
+        <h3>Add wild card activities!</h3>
+        <img src="assets/img/wildcard.png" class = "image-wildcard">
+      </div>
     </section>
-
     <!-- Copyright Section-->
     <section class="copyright py-4 text-center text-white">
       <div class="container">
-        <small class="pre-wrap"> Made with love by Justina Chua, Sadhana Lolla, and Jendy Ren <3 </small>
+        <small class="pre-wrap"> Made with love by Justina Chua, Sadhana Lolla, and Jendy Ren <3 <br> Google CSSI 2020</small>
       </div>
     </section>
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+    
+    <!--Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
     <div class="scroll-to-top d-lg-none position-fixed">
       <a
         class="js-scroll-trigger d-block text-center text-white rounded"
@@ -106,6 +115,14 @@
         ><i class="fa fa-chevron-up"></i
       ></a>
     </div>
+    <!-- 
+    <script>
+      console.log(window.localStorage.getItem('timeInterval'))
+      function storeVars() {
+        window.localStorage.setItem('timeInterval', document.getElementById("test"));
+      }
+    </script>
+    -->
     <!-- Bootstrap core JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
@@ -116,5 +133,7 @@
     <script src="assets/mail/contact_me.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+    <!-- Local storage JS -->
+    
   </body>
 </html>

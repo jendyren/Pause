@@ -1,6 +1,6 @@
 /* latin */
 @font-face {
-    font-family: 'SB Body';
+    font-family: 'Rubik';
     font-style: italic;
     font-weight: 400;
     src: local('Lato Italic'), local('Lato-Italic'),
@@ -10,7 +10,7 @@
 }
 /* latin */
 @font-face {
-    font-family: 'SB Body';
+    font-family: 'Rubik Regular';
     font-style: italic;
     font-weight: 700;
     src: local('Lato Bold Italic'), local('Lato-BoldItalic'),
@@ -21,7 +21,7 @@
 }
 /* latin */
 @font-face {
-    font-family: 'SB Body';
+    font-family: 'Rubik Regular';
     font-style: normal;
     font-weight: 400;
     src: local('Lato Regular'), local('Lato-Regular'),
@@ -31,7 +31,7 @@
 }
 /* latin */
 @font-face {
-    font-family: 'SB Body';
+    font-family: 'Rubik Regular';
     font-style: normal;
     font-weight: 700;
     src: local('Lato Bold'), local('Lato-Bold'),

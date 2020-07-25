@@ -61,6 +61,10 @@ nav,
 section {
   display: block;
 }
+.custom-text{
+  margin-bottom: 10%;
+}
+
 body {
   margin: 0;
   font-family: SB Body, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
@@ -76,6 +80,20 @@ body {
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
+.text-image {
+  position: absolute;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.5em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.vector-image{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
 hr {
   box-sizing: content-box;
   height: 0;
@@ -436,7 +454,7 @@ mark {
 }
 .img-fluid,
 .img-thumbnail {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
 }
 .img-thumbnail {
@@ -496,6 +514,10 @@ pre code {
   padding-left: 1.5rem;
   margin-right: auto;
   margin-left: auto;
+}
+
+.container small{
+  color: white;
 }
 @media (min-width: 576px) {
   .container {
@@ -4331,6 +4353,10 @@ input[type="submit"].btn-block {
   list-style: none;
   border-radius: 0.5rem;
 }
+#page-top{
+  background-color: #FFF9EB;
+}
+
 .page-link {
   position: relative;
   display: block;
@@ -4709,6 +4735,12 @@ a.badge-dark:focus {
   white-space: nowrap;
   background-color: #1abc9c;
   transition: width 0.6s ease;
+}
+
+.start-times {
+  text-align: center;
+  top: 50%;
+  bottom: 50%;
 }
 @media (prefers-reduced-motion: reduce) {
   .progress-bar {
@@ -5946,6 +5978,18 @@ button.bg-dark:hover {
 .rounded-left {
   border-bottom-left-radius: 0.5rem !important;
 }
+.wildcard {
+  display: flex;
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.image-wildcard{
+  width: 40%;
+  margin-top: 5%;
+  margin-left: 25%;
+}
+
 .rounded-left {
   border-top-left-radius: 0.5rem !important;
 }
@@ -5986,6 +6030,15 @@ button.bg-dark:hover {
 }
 .d-table-cell {
   display: table-cell !important;
+}
+.pause-imgs {
+  width: 70%;
+  height: 70%;
+}
+.pause-text {
+  font-family: 'Rubik', sans-serif;
+  padding-top: 20px;
+  font-size: 27px;
 }
 .d-flex {
   display: flex !important;
@@ -6217,6 +6270,8 @@ button.bg-dark:hover {
   justify-content: flex-end !important;
 }
 .justify-content-center {
+  margin-top: 10%;
+  margin-bottom: 10%;
   justify-content: center !important;
 }
 .justify-content-between {
@@ -8866,7 +8921,7 @@ a.text-dark:hover {
   }
 }
 .page-section {
-  padding: 6rem 0;
+  //padding: 6rem 0;
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;
@@ -8892,6 +8947,7 @@ a.text-dark:hover {
   background-color: #2c3e50;
   border-radius: 1rem;
   border-color: #2c3e50 !important;
+  
 }
 .divider-custom .divider-custom-line:first-child {
   margin-right: 1rem;
@@ -8993,10 +9049,7 @@ a.text-dark:hover {
     font-size: 1.5em;
   }
 }
-.masthead {
-  padding-top: calc(6rem + 74px);
-  padding-bottom: 6rem;
-}
+
 .masthead .masthead-heading {
   font-size: 2.75rem;
   line-height: 2.75rem;
@@ -9009,8 +9062,8 @@ a.text-dark:hover {
 }
 @media (min-width: 992px) {
   .masthead {
-    padding-top: calc(6rem + 104px);
-    padding-bottom: 6rem;
+    padding-top: 20px;
+    padding-bottom: 2rem;
   }
   .masthead .masthead-heading {
     font-size: 4rem;
@@ -9019,6 +9072,18 @@ a.text-dark:hover {
   .masthead .masthead-subheading {
     font-size: 1.5rem;
   }
+}
+
+.logo {
+  margin-top: 2%;
+  margin-bottom: 5%;
+  width: 230px;
+}
+
+.divider {
+  width: 100%;
+  
+  height: 150px !important;
 }
 .portfolio .portfolio-item {
   cursor: pointer;
@@ -9049,7 +9114,7 @@ a.text-dark:hover {
   font-size: 2.25rem;
   line-height: 2rem;
 }
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   .portfolio-modal .portfolio-modal-title {
     font-size: 3rem;
     line-height: 2.5rem;
@@ -9131,6 +9196,23 @@ form .row:first-child .floating-label-form-group {
 }
 .pre-wrap {
   white-space: pre-wrap;
+}
+.mission {
+  margin-top: 2%;
+  font-size: 1.5em;
+  font-family: 'Rubik', sans-serif;
+  text-align: left !important;
+  padding-left: 65px;
+  margin: auto; 
+}
+.reading {
+      width: 373px;
+    height: 228px;
+
+}
+.intro {
+  display: flex;
+  padding-bottom: 20px;
 }
 .icon-contact {
   display: flex;
