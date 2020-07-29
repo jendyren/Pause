@@ -73,9 +73,9 @@ section {
 
 body {
   margin: 0;
-  font-family: SB Body, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  /* font-family: SB Body, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
-    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; */
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -88,7 +88,89 @@ body {
 }
 .wildcard-text {
   font-family: 'Rubik', sans-serif;
+  position: relative; 
+  top: 75px;
 }
+
+.wildminute {
+  text-align: center;
+}
+
+.base-timer {
+  position: relative;
+  width: 210px;
+  height: 210px;
+}
+
+
+.base-timer_label_1, 
+.base-timer_label_2,
+.base-timer_label_3 {
+  position: absolute;
+  width: 211px;
+  height: 217px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.timers {
+  display: inline-block;
+}
+
+.timer {
+  float: left;
+}
+
+
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer_path-elapsed_1, .base-timer_path-elapsed_2, .base-timer_path-elapsed_3 {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer_path-remaining_1, .base-timer_path-remaining_2, .base-timer_path-remaining_3 {
+   /* color: #0A369D; */
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer_path-remaining_1.green,
+.base-timer_path-remaining_2.green,
+.base-timer_path-remaining_3.green {
+  color: #0A369D;
+}
+
+.base-timer_path-remaining_1.orange,
+.base-timer_path-remaining_2.orange,
+.base-timer_path-remaining_3.orange {
+  color: #3b5fc5;
+}
+
+.base-timer_path-remaining_1.red
+.base-timer_path-remaining_2.red
+.base-timer_path-remaining_3.red {
+  color: #5E7CE2;
+}
+
+
+
 .text-image {
   position: absolute;
   font-family: 'Rubik', sans-serif;
@@ -579,22 +661,39 @@ pre code {
     font-size: 1.5em;
     font-family: 'Rubik', sans-serif;
     text-align: left !important;
-    padding-left: 65px;
     margin: auto; 
     padding-top: 10%;
     margin-bottom: 5%;
   }
+
+  .wildcard-flex{
+    width: 100%;
+    height: 210px;
+  }
+
   .wildcard {
+
     display: flex;
-    flex-direction: column;
     text-align: center;
     margin-bottom: 10%;
   }
 
   .image-wildcard{
-    margin-top: 5%;
-    
+    /* float: right; */
+    display: block;
+    position: relative;
+    padding-left: 116px;
+    top: -120px;
   }
+
+  .flexwildtext{
+    position: relative;
+    top: 64px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  
   
 }
 
@@ -650,6 +749,7 @@ pre code {
   margin-right: 0;
   margin-left: 0;
 }
+
 .no-gutters > .col,
 .no-gutters > [class*="col-"] {
   padding-right: 0;
@@ -6038,6 +6138,12 @@ button.bg-dark:hover {
 .rounded-left {
   border-bottom-left-radius: 0.5rem !important;
 }
+
+.wildcard-flex{
+  display: flex;
+  height: 210px;
+}
+
 .wildcard {
   display: flex;
   text-align: center;
@@ -6045,8 +6151,18 @@ button.bg-dark:hover {
 }
 
 .image-wildcard{
-  margin-top: 5%;
-  margin-left: 25%;
+  /* float: right; */
+  display: block;
+  position: relative;
+  padding-left: 116px;
+  top: -120px;
+}
+
+.flexwildtext{
+  position: relative;
+  top: 64px;
+  display: flex;
+  flex-direction: row;
 }
 
 .rounded-left {
@@ -6081,6 +6197,9 @@ button.bg-dark:hover {
 .d-block {
   display: block !important;
 }
+.wildcard-text {
+  text-align: left;
+}
 .d-table {
   display: table !important;
 }
@@ -6090,14 +6209,37 @@ button.bg-dark:hover {
 .d-table-cell {
   display: table-cell !important;
 }
-.pause-imgs {
-  width: 60%;
-  height: 60%;
+.water {
+  margin: 0;
+ 
+}
+
+.group {
+  text-align: center;
+}
+.waterminute {
+  display: block;
+  position: relative;
+  text-align: center;
+}
+.raindrop {
+  width: 60px;
+
+  /* margin-left: auto;
+  margin-right: auto;
+  display: block; */
+  /* text-align: center;
+  display: inline-block; */
+
+}
+.addwildcard {
+  width: 662px;
 }
 .pause-text {
   font-family: 'Rubik', sans-serif;
   padding-top: 20px;
   font-size: 27px;
+  text-align: center;
 }
 .d-flex {
   display: flex !important;
@@ -9264,8 +9406,9 @@ form .row:first-child .floating-label-form-group {
   font-size: 1.5em;
   font-family: 'Rubik', sans-serif;
   text-align: left !important;
-  padding-left: 65px;
-  margin: auto; 
+  
+  margin-left: 10%; 
+  
 }
 .reading {
   width: 373px;

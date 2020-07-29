@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Pause</title>
-    <!-- Font Awesome icons (free version)-->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
-    <!-- Fonts CSS-->
-    <link rel="stylesheet" href="css/heading.css" />
-    <link rel="stylesheet" href="css/body.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
-  </head>
-  
-  <body id="page-top">
-    <header class="masthead bg-primary text-white text-center">
-      <div class="container d-flex align-items-center flex-column">
-        <!-- Masthead Heading-->
-        <!-- Masthead Avatar Image-->
-        <img class="logo" src="assets/img/logo.png">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<title>Pause</title>
+	<!-- Font Awesome icons (free version)-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous">
+
+	</script>
+	<!-- Core theme CSS (includes Bootstrap)-->
+	<link href="css/styles.css" rel="stylesheet" />
+	<link href="css/minutes.css" rel="stylesheet" />
+
+	<!-- Fonts CSS-->
+	<link rel="stylesheet" href="css/heading.css" />
+
+	<link rel="stylesheet" href="css/body.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link id="favicon" rel="icon" href="logo.png"/>
+</head>
+
+<body id="page-top">
+	<header class="masthead bg-primary text-white text-center">
+		<div class="container d-flex align-items-center flex-column">
+			<!-- Masthead Heading-->
+			<!-- Masthead Avatar Image-->
+			<img class="logo" src="assets/img/logo.png">
 
         <!-- Masthead Subheading-->
         <div class="intro"> 
@@ -54,53 +55,180 @@
         </div>
       </div>  
       </div>
+  
       <div class="container">
+        <!-- <img
+		        class="raindrop"
+		        src="assets/img/raindrop.png"
+		        alt="raindrop"
+		      /> -->
+         
+		      <!--
+			    <div class="timers">
+            <div class="timer timer-id-1"></div>
+            <div class="timer timer-id-2"></div>
+            <div class="timer timer-id-3"></div>
+          </div>
+          -->
+		      
+       
         <!-- Portfolio Grid Items-->
         <div class="row justify-content-center">
           <!-- Portfolio Items-->
           <div class="col-md-6 col-lg-4 mb-5">
-            <div class="portfolio-item mx-auto">
+            <div class="portfolio-item mx-auto group">
               <center>
-                <img
-                  class="pause-imgs"
-                  src="assets/img/raindrop.png"
-                  alt="raindrop"
-                />
-                <p class="pause-text">Water Pause</p>
+                <div class="timers">
+                  <div class="timer timer-id-1"></div>
+                </div>
               </center>
+              <form id="inputs">
+                  <center>
+                    <p class="pause-text">Water Pause  💧</p>
+                    
+                  </center>
+                  <div class="waterminute">
+                    <input type="number"
+                    step="0.01" 
+                    id="waterinput" name="waterinput">
+                    <label for="waterinput">minutes</label>
+                    
+                  </div>
+                  <br>
+                  <div class="submit-button">
+                    <input type="submit"
+                    onclick="water_refresh()" id="water_submit" value="Submit">
+                  </div>
+              </form>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 mb-5">
             <div class="portfolio-item mx-auto">
               <center>
-                <img
-                  class="pause-imgs"
-                  src="assets/img/stretch.png"
-                  alt="stretch"
-                />
-                <p class="pause-text">Stretch Pause</p>
+                <div class="timers">
+                  <div class="timer timer-id-2"></div>
+                </div>
               </center>
+              <form id="inputs">
+                <center>
+                  <!-- <img
+                    class="pause-imgs"
+                    src="assets/img/stretch.png"
+                    alt="stretch"
+                  /> -->
+                
+                  <p class="pause-text">Stretch Pause  🧘‍♀️</p>
+                  <div class="stretchminute">
+                    <input type="number" 
+                    step="0.01"
+                    id="stretchinput" name="stretchinput">
+                    <label for="stretchinput">minutes</label>
+                  </div>
+                  <br>
+                  <div class="submit-button">
+                    <input type="submit" id="stretch_submit"
+                    onclick="stretch_refresh()" value="Submit">
+                  </div>
+                </center>
+                
+              </form>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 mb-5">
             <div class="portfolio-item mx-auto">
               <center>
-                <img
-                  class="pause-imgs"
-                  src="assets/img/wild.png"
-                  alt="wild card"
-                />
-                <p class="pause-text">Wild Card Pause</p>
+                <div class="timers">
+                  <div class="timer timer-id-3"></div>
+                </div>
               </center>
+              <form id="inputs">
+                <center>
+                  <!-- <img class="pause-imgs" src="assets/img/wild.png" alt="wild card"/> -->
+                  <p class="pause-text">Wild Card Pause 🤪</p>
+                  <div class="wildminute">
+                    <input type="number" 
+                    step="0.01"
+                    id="wildinput" name="wildinput">
+                    <label for="wildinput">minutes</label>
+                  </div>
+                  <br>
+                  <div class="submit-button">
+                    <input type="submit" 
+                    id="wildcard_submit"
+                    onclick="wildcard_refresh()"
+                    value="Submit">
+                  </div>
+
+                </center>
+                
+              </form>
             </div>
           </div>
         </div>
-        
-      <div class = "wildcard">
+
+      <!-- <div class="input-time">  
+        <form action="/action_page.php" id="inputs">
+          <div class="minutes">
+            <div class="water">
+              <input type="number" id="waterinput" name="waterinput">
+              <label for="waterinput">minutes</label>
+            </div>
+
+            <br><br>
+
+            <div class="stretch">
+              <input type="number" id="stretchinput" name="stretchinput">
+              <label for="stretchinput">minutes</label>
+            </div>
+
+            <br><br>
+
+            <div class="wild">
+              <input type="number" id="wildinput" name="wildinput">
+              <label for="wildinput">minutes</label>
+            </div>
+          </div>
+
+            <br><br>
+            
+            <div class="submit-button">
+              <input type="submit" value="Submit">
+            </div>
+          
+        </form>
+      </div> -->
+      
+      <div class="addwildcard">
         <h3 class="wildcard-text">Add wild card activities!</h3>
-        <img src="assets/img/wildcard.png" class = "image-wildcard">
+        <br>
+      </div>
+
+      <div class = "wildcard">
+        <br><br>
+        <div class = "wildcard-flex">
+          <form id="inputs">
+            <div class="flexwildtext">
+              <div class="wildinput-text">
+                <input type="text" id="wildtextinput" name="wildtextinput">
+              </div>
+              <div class="wildsubmit-padding">
+                <div class="submit-button">
+                  <button type="button" id="wildtextsubmit"
+                   value="Submit">Submit</button>
+                   
+                </div>
+               
+              </div>
+            </div>
+          </form>
+          <div class="image-wildcard">
+            <img src="assets/img/wildcard.png">
+          </div>
+        </div>
+        
       </div>
     </section>
+        
     <!-- Copyright Section-->
     <section class="copyright py-4 text-center text-white">
       <div class="container">
@@ -139,6 +267,8 @@
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
     <!-- Local storage JS -->
-    
+    <script src="js/notifs.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/wildcard.js"></script>
   </body>
 </html>
