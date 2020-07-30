@@ -5,7 +5,7 @@
 
 establist a list in local storage called wildcard_activities, append to this list every time a new wildcard is added
 */
-
+var img = "assets/img/small-logo.png"
 if (localStorage.getItem("waterinput") === null || localStorage.getItem("waterinput") == "" || localStorage.getItem("waterinput") == 0) {
   localStorage.setItem("waterinput", "10")
 }
@@ -64,13 +64,14 @@ function waterNotif() {
   watertimer = setInterval(waterNotif, parseFloat(localStorage.getItem("waterinput")) * 60000)
 }
 function stretch_refresh() {
-  event.preventDefault();
+ event.preventDefault();
  if (localStorage.getItem("stretchinput") != document.getElementById("stretchinput").value && document.getElementById("stretchinput").value != "" && document.getElementById("stretchinput").value != 0) {
    localStorage.setItem("stretchinput", document.getElementById("stretchinput").value);
    console.log(localStorage.getItem("stretchinput"))
    clearInterval(stretchtimer);
    stretchtimer = setInterval(stretchNotif, parseFloat(localStorage.getItem("stretchinput")) * 60000)
-  }
+   timer2.updateTimer(parseFloat(localStorage.getItem("stretchinput")) * 60)
+ }
 }
 function stretchNotif() {
   notifyMe("stretch")
@@ -85,6 +86,7 @@ function wildcard_refresh() {
    console.log(localStorage.getItem("wildinput"))
    clearInterval(wildcardtimer);
    wildcardtimer = setInterval(wildcardNotif, parseFloat(localStorage.getItem("wildinput")) * 60000)
+   timer3.updateTimer(parseFloat(localStorage.getItem("wildinput")) * 60)
   }
 
 }
@@ -106,12 +108,13 @@ function notifyMe(notifType) {
       // show notification here
       var notify = new Notification('Hi from Pause!', {
         body: "It's time to: " + notifType,
+        icon: img 
       });
       
       
       console.log(notifType + " sent!")
       
-      setTimeout(function () { alert(notifType); }, 1000);
+      setTimeout(function () { alert(notifType); }, 500);
       
     } else {
       // request permission from user

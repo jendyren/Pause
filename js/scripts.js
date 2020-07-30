@@ -71,7 +71,7 @@ class Timer {
   }
   onTimesUp() {
   clearInterval(this.timerInterval);
-  this.startTimer()
+  this.startTimer();
 }
 
 getTimerLabel() {
